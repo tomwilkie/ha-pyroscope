@@ -1,0 +1,13 @@
+{
+  "domain": "pyroscope",
+  "name": "Pyroscope",
+  "codeowners": ["@tomwilkie"],
+  "config_flow": true,
+  "documentation": "https://github.com/tomwilkie/ha-pyroscope",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/tomwilkie/ha-pyroscope/issues",
+  "requirements": ["pyroscope-io==1.4.0"],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

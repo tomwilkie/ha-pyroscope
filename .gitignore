@@ -1,0 +1,23 @@
+# Ignore everything by default, then allow the project's own files.
+*
+!*/
+!.gitignore
+!.github/**
+!custom_components/**
+!tests/**
+!CLAUDE.md
+!README.md
+!LICENSE
+!hacs.json
+!pyproject.toml
+!requirements_test.txt
+
+# Never commit these, even inside allowed directories.
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.log
+.venv/
+.pytest_cache/
+.ruff_cache/

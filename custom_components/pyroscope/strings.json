@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Pyroscope",
+        "description": "Send continuous CPU profiles of Home Assistant to a Pyroscope server or Grafana Cloud Profiles.",
+        "data": {
+          "url": "Server URL",
+          "username": "Username",
+          "password": "Password or token",
+          "application_name": "Service name"
+        },
+        "data_description": {
+          "url": "For Grafana Cloud, the URL on your stack's Profiles details page.",
+          "username": "For Grafana Cloud, the Profiles instance ID. Leave empty if the server has no auth.",
+          "password": "For Grafana Cloud, an access policy token with the profiles:write scope.",
+          "application_name": "Sent as the service_name label."
+        }
+      }
+    },
+    "error": {
+      "invalid_url": "Enter an absolute http or https URL."
+    },
+    "abort": {
+      "single_instance_allowed": "Pyroscope is already configured. The profiler is process-wide, so only one entry is allowed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Profiling options",
+        "data": {
+          "sample_rate": "Sample rate (Hz)",
+          "memory_profiling": "Memory profiling"
+        },
+        "data_description": {
+          "sample_rate": "CPU samples per second. Lower it to reduce overhead.",
+          "memory_profiling": "Also send allocation profiles. Adds overhead."
+        }
+      }
+    }
+  }
+}
